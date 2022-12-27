@@ -2,7 +2,7 @@
 GET http://0.0.0.0:8080/accounts
 
 ###
-POST localhost:8080/account
+POST http://0.0.0.0:8080/account
 Content-Type: application/json
 {"username": "ivan", "balance": 1000}
 
