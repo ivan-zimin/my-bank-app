@@ -1,15 +1,14 @@
-package ru.misis.bank
+package ru.misis.bank.db
+
+import ru.misis.bank.models.Account
+import slick.jdbc.PostgresProfile.api._
+import slick.lifted.Tag
 
 import java.util.UUID
 
-case class Account(id: UUID = UUID.randomUUID(), username: String, balance: Int)
-
-
-object SlickTables {
-  import slick.jdbc.PostgresProfile.api._
-
+object BankDb {
   class AccountTable(tag: Tag) extends Table[Account](tag, Some("accounts"), "Account") { // accounts - имя schema, Account - имя таблицы
-    def id = column[UUID]("id", O.PrimaryKey) // исправить?
+    def id = column[UUID]("id", O.PrimaryKey)
     def username = column[String]("username")
     def balance = column[Int]("balance")
 

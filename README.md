@@ -1,1 +1,1 @@
-# Fast payment system
+# Система быстрых платежей
