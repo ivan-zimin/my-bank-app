@@ -1,23 +1,15 @@
-###
 http GET http://0.0.0.0:8080/accounts
 
-###
 http POST localhost:8080/account <<< '{ "username": "ivan", "balance": 1000 }'
 
-###
 http GET http://0.0.0.0:8080/account/f91f01a4-f68b-437f-9dc8-f97c4ef0baef
 
-###
 http PUT http://0.0.0.0:8080/account <<< '{ "id": "f91f01a4-f68b-437f-9dc8-f97c4ef0baef", "username": "john" }'
 
-###
 http PUT http://0.0.0.0:8080/account/balance/plus <<<'{ "id": "9b193ade-5978-45d5-816d-529001635f7b", "balance": "10" }'
 
-###
 http PUT http://0.0.0.0:8080/account/balance/minus <<<'{ "id": "9b193ade-5978-45d5-816d-529001635f7b", "balance": "100" }'
 
-###
 http PUT http://0.0.0.0:8080/transaction <<<'{ "idSender": "f91f01a4-f68b-437f-9dc8-f97c4ef0baef", "idRecipient": "9b193ade-5978-45d5-816d-529001635f7b", "balanceChange": "500" }'
 
-###
 http DELETE http://0.0.0.0:8080/account/f91f01a4-f68b-437f-9dc8-f97c4ef0baef
